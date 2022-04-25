@@ -1,0 +1,21 @@
+[package]
+name = "hello-wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2" }
+js-sys = "0.3.57"
+wasm-bindgen-futures = "0.4.30"
+web-sys = {version = "0.3", features = ["console", "Worker", "WorkerGlobalScope"]}
+futures = "0.3"
+
+[dependencies.async-std]
+version = "1.7.0"
+features = ["attributes"]
+
